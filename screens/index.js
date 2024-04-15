@@ -7,7 +7,7 @@ import Address from "./Address";
 import Notifications from "./Notifications";
 import Faqs from "./Faqs";
 import Favourite from "./Favourite";
-import PaymentMethod from "./PaymentMethod";
+import PaymentMethod from "./Disciplina";
 
 export {
     Home,

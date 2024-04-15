@@ -20,7 +20,6 @@ const Drawer = createDrawerNavigator();
 const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
-
       drawerContent={
         (props)=>{
             return (
@@ -46,12 +45,12 @@ const DrawerNavigation = () => {
                             fontWeight: "bold",
                             color: COLORS.black,
                             marginBottom: 6
-                        }}>Isabella Joanna</Text>
+                        }}>Igor Andre</Text>
                         <Text style={{
-                            fontSize: 16,
+                            fontSize: 12,
                             color: COLORS.black
 
-                        }}>Product Designer</Text>
+                        }}>Eng. Software - 7º período</Text>
                     </View>
                     <DrawerItemList {...props} />
                 </SafeAreaView>
@@ -76,34 +75,22 @@ const DrawerNavigation = () => {
       }}
     >
       <Drawer.Screen
-        name="Home"
+        name="Período"
         options={{
-          drawerLabel: "Home",
-          title: "Home",
+          drawerLabel: "Período",
+          title: "Período",
           headerShadowVisible: false,
           drawerIcon: () => (
             <Ionicons name="home-outline" size={24} color={COLORS.black} />
           ),
         }}
         component={BottomTabNavigation}
-      />
+      />   
       <Drawer.Screen
-        name="Orders"
+        name="Buscar"
         options={{
-          drawerLabel: "Orders",
-          title: "Orders",
-          headerShadowVisible: false,
-          drawerIcon: () => (
-            <Ionicons name="gift-outline" size={24} color={COLORS.black} />
-          ),
-        }}
-        component={Orders}
-      />
-      <Drawer.Screen
-        name="Search"
-        options={{
-          drawerLabel: "Search",
-          title: "Search",
+          drawerLabel: "Buscar",
+          title: "Buscar",
           headerShadowVisible: false,
           drawerIcon: () => (
             <Ionicons name="search-outline" size={24} color={COLORS.black} />
@@ -112,46 +99,22 @@ const DrawerNavigation = () => {
         component={Search}
       />
       <Drawer.Screen
-        name="Wishlist"
+        name="Destaques"
         options={{
-          drawerLabel: "Wishlist",
-          title: "Wishlist",
+          drawerLabel: "Destaques",
+          title: "Destaques",
           headerShadowVisible: false,
           drawerIcon: () => (
             <Ionicons name="heart-outline" size={24} color={COLORS.black} />
           ),
         }}
         component={Favourite}
-      />
+      />         
       <Drawer.Screen
-        name="Delivery Address"
+        name="Notificações"
         options={{
-          drawerLabel: "Delivery Address",
-          title: "Delivery Address",
-          headerShadowVisible: false,
-          drawerIcon: () => (
-            <Ionicons name="location-outline" size={24} color={COLORS.black} />
-          ),
-        }}
-        component={Address}
-      />
-      <Drawer.Screen
-        name="Payment Methods"
-        options={{
-          drawerLabel: "Payment Methods",
-          title: "Payment Methods",
-          headerShadowVisible: false,
-          drawerIcon: () => (
-            <AntDesign name="creditcard" size={24} color={COLORS.black} />
-          ),
-        }}
-        component={PaymentMethod}
-      />
-      <Drawer.Screen
-        name="Notifications"
-        options={{
-          drawerLabel: "Notifications",
-          title: "Notifications",
+          drawerLabel: "Notificações",
+          title: "Notificações",
           headerShadowVisible: false,
           drawerIcon: () => (
             <Ionicons
@@ -164,10 +127,10 @@ const DrawerNavigation = () => {
         component={Notifications}
       />
       <Drawer.Screen
-        name="Help"
+        name="Ajuda"
         options={{
-          drawerLabel: "Help",
-          title: "Help",
+          drawerLabel: "Ajuda",
+          title: "Ajuda",
           headerShadowVisible: false,
           drawerIcon: () => (
             <Feather name="help-circle" size={24} color={COLORS.black} />
