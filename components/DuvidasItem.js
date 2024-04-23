@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Modal, Pressable, FlatList } from 'react-native';
 import { COLORS } from '../constants';
-import { useNavigation } from "@react-navigation/native";
 
-const DisciplineItem = ({ discipline }) => {
+const DuvidasItem = ({ discipline, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
-  const navigation = useNavigation();
   const handleVerDuvidas = () => {
     navigation.navigate('Duvidas');
 };
@@ -128,4 +126,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DisciplineItem;
+export default DuvidasItem;

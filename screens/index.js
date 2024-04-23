@@ -1,23 +1,9 @@
-import Home from "./Home";
-import Message from "./Message";
-import Orders from "./Orders";
-import Profile from "./Profile";
-import Search from "./Search";
-import Address from "./Address";
-import Notifications from "./Notifications";
-import Faqs from "./Faqs";
-import Favourite from "./Favourite";
-import PaymentMethod from "./Disciplina";
+import Periodos from "./Periodos";
+import Disciplinas from "./Disciplinas";
+import Duvidas from "./Duvidas";
 
 export {
-    Home,
-    Message,
-    Orders,
-    Profile,
-    Search,
-    Address,
-    Notifications,
-    Faqs,
-    Favourite,
-    PaymentMethod
+    Periodos,
+    Disciplinas,
+    Duvidas
 }
