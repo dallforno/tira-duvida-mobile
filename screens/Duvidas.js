@@ -1,14 +1,15 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import React, { useRef } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS } from "../constants";
 import Header from "../components/Header";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const queries = [
   {
     id: "1",
-    status: "1",
+    status: "Pendente",
     curtidas: "4",
     disciplina: "Desenvolvimento Mobile",
     professor: "Jeferson",
@@ -18,7 +19,7 @@ const queries = [
   },
   {
     id: "2",
-    status: "2",
+    status: "Respondida",
     curtidas: "10",
     disciplina: "Desenvolvimento Mobile",
     professor: "Elaine Zanini",
@@ -29,6 +30,11 @@ const queries = [
 ];
 
 const QueryItems = ({ query }) => {
+  const navigation = useNavigation();
+  const handleVerDisciplinas = () => {
+    navigation.navigate("Disciplinas");
+  };
+
   return (
     <View style={styles.periodContainer}>
       <View style={styles.infoContainer}>
@@ -58,6 +64,14 @@ const QueryItems = ({ query }) => {
         </Text>
         <Text style={styles.textPeriod}>
           <Ionicons
+            name="checkmark"
+            size={21}
+            style={{ color: COLORS.primary }}
+          />
+          <Text style={styles.textBold}> Status:</Text> {query.status}
+        </Text>
+        <Text style={styles.textPeriod}>
+          <Ionicons
             name="pencil-outline"
             size={21}
             style={{ color: COLORS.primary }}
@@ -71,7 +85,7 @@ const QueryItems = ({ query }) => {
             style={{ color: COLORS.primary }}
           />
           <Text style={styles.textBold}> Texto:</Text> {query.texto}
-        </Text>
+        </Text>       
       </View>
     </View>
   );
